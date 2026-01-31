@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wind</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/logo2.png')}}" alt="Logo">
+            <span>Wind</span>
+        </div>
+
+        
+
+
+        <input type="checkbox" id="btn-menu" class="input-hidden">
+        <img src="" alt="">
+
+
+        <label for="btn-menu" class="menu-open-btn">
+            <img src="{{url_for('static', filename='img/icons8_menu.ico')}}" alt="Abrir Menú">
+        </label>
+
+
+        <div class="menu-overlay">
+            <label for="btn-menu" class="menu-close-btn">&times;</label>
+            
+            <nav class="menu-links">
+                <ul>
+                    <li><a href="{{ url_for('index')}}">Inicio</a></li>
+                    <li><a href="{{ url_for('calendario')}}">Calendario</a></li>
+                    <li><a href="{{ url_for('juegos')}}">Juegos</a></li>
+            <li><a href=""><a href="{{ url_for('info')}}">Info</a></li>
+                    
+            
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="content">
+        <h1>Conoces a Coro?</h1>
+        <p>Descubre todo sobre nuestra ciudad.</p>
+    </main">
+
+    
+
+    <!-- Tarjetas --> 
+
+    <div class="card">
+      <div class="image-container">
+        <img src="{{url_for('static', filename='img/casco_historico.png')}}" alt="casco historico" 
+        class="card-image">
+      </div>
+      <div class="card-container">
+        <h3 class="card-tittle">Casco Historico</h3>
+        <p class="card-descrip">Lorem, ipsum dolor 
+          sit amet consectetur adipisicing elit. Quis ducimus sapiente, vita
+          e rem fugiat hic architecto omnis vel consequuntur 
+          reprehenderit non, nobis magnam in! Totam iure culpa explicabo cum eos.
+        </p>
+        <a href="#" class="card-button"> Conocer mas</a>
+      </div>
+
+    </div>
+
+
+
+
+
+
+</body>
+</html>
+

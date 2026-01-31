@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coro.</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_balcon_arcayas.css') }}">
+    
+</head><h1>balcon de las arcayas</h1>
+<body>
+
+    <header class="navbar">
+        <div  class="logo"><a href="{{ url_for('index')}}">
+            <img src="{{ url_for('static', filename='img/icons8_left.ico')}}" alt="Logo">
+        </a>
+            
+            <span class="barra-titulo" >balcon de las arcayas</span>
+        </div>
+
+        
+
+
+        <input type="checkbox" id="btn-menu" class="input-hidden">
+        <img src="" alt="">
+
+
+        <label for="btn-menu" class="menu-open-btn">
+            <img src="{{url_for('static', filename='img/icons8_menu.ico')}}" alt="Abrir Menú">
+        </label>
+
+
+        <div class="menu-overlay">
+            <label for="btn-menu" class="menu-close-btn">&times;</label>
+            
+            <nav class="menu-links">
+                <ul>
+                    <li><a href="{{ url_for('index')}}">Inicio</a></li>
+                    <li><a href="{{ url_for('calendario')}}">Calendario</a></li>
+                    <li><a href="{{ url_for('juegos')}}">Juegos</a></li>
+                    
+            <li><a href=""><a href="{{ url_for('info')}}">Info</a></li>
+                    
+            
+            </nav>
+        </div>
+    </header>    
+    
+</body>
+</html>

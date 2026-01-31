@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coro.</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style-info.css') }}">
+
+</head>
+<body>
+
+
+    <header class="navbar">
+        <div  class="logo"><a href="{{ url_for('index')}}">
+            <img src="{{ url_for('static', filename='img/icons8_left.ico')}}" alt="Logo">
+        </a>
+            
+            <span class="barra-titulo" >Casco Historico</span>
+        </div>
+
+        
+
+
+        <input type="checkbox" id="btn-menu" class="input-hidden">
+        <img src="" alt="">
+
+
+        <label for="btn-menu" class="menu-open-btn">
+            <img src="{{url_for('static', filename='img/icons8_menu.ico')}}" alt="Abrir Menú">
+        </label>
+
+
+        <div class="menu-overlay">
+            <label for="btn-menu" class="menu-close-btn">&times;</label>
+            
+            <nav class="menu-links">
+                <ul>
+                    <li><a href="{{ url_for('index')}}">Inicio</a></li>
+                    <li><a href="{{ url_for('calendario')}}">Calendario</a></li>
+                    <li><a href="{{ url_for('juegos')}}">Juegos</a></li>
+            <li><a href=""><a href="{{ url_for('info')}}">Info</a></li>
+                    
+            
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="content">
+        <h1>Casco Historico</h1>
+        <p>Este contenido.</p>
+        <div style="height: 200px; background: linear-gradient(rgb(248, 176, 7), #e07a05);"><p>El Casco Colonial de Santa Ana de Coro, capital del estado Falcón, Venezuela, es un tesoro arquitectónico y cultural, declarado Patrimonio de la Humanidad por la UNESCO en 1993, famoso por ser el primer asentamiento perdurable en Tierra Firme, combinando estilos barroco, mudéjar y neoclásico en sus calles, iglesias como San Francisco y San Clemente, y casas coloniales, ofreciendo un viaje por la historia venezolana junto a los impresionantes Médanos de Coro
+        El Casco Histórico de Coro, en el estado Falcón, Venezuela, es un tesoro colonial declarado Patrimonio Cultural de la Humanidad por la UNESCO. Fundada en 1527, fue la primera ciudad de Venezuela y su centro histórico es famoso por sus calles empedradas y edificaciones coloniales únicas, que combinan influencias españolas y locales, destacando por sus grandes ventanas de madera y su rica historia que se puede sentir en cada rincón, siendo un punto clave para el turismo cultural en el país.
+        </p>
+        </div>
+    </main>
+
+
+</body>
+</html>
+

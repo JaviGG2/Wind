@@ -1,0 +1,127 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Barra flotante y de navegacion */
+.navbar {
+    position: fixed; /* La hace que no se mueva al deslizar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #ffe6d7e3;
+    display: flex;
+    justify-content: space-between; /* Logo a la izquierda, botón a la derecha */
+    align-items: center;
+    padding: 0 5%;
+    box-shadow: 0 2px 10px rgba(247, 113, 4, 0.1);
+    z-index: 1000; /* Siempre por encima de todo */
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+
+.logo img {
+    height: 40px; /* Tamaño del logo principal */
+    margin-right: 5px;
+}
+
+
+/* boton de abrir*/
+.menu-open-btn {
+    cursor: pointer;
+}
+
+
+.menu-open-btn img {
+    height: 35px; /* Tamaño del boton(menu)*/
+    display: block;
+}
+
+
+/* se oculta el checkbox */
+.input-hidden {
+    display: none;
+}
+
+
+/* el centro de pantalla(las opciones del menu) */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(143, 55, 55, 0.9); /* Fondo oscuro*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* al iniciar este oculto */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.6s ease;
+}
+
+
+/* la apertura */
+
+#btn-menu:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* diseño del menu */
+.menu-links ul {
+    list-style: none;
+    text-align: center;
+}
+
+
+.menu-links li {
+    margin: 20px 0;
+}
+
+
+.menu-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+
+.menu-links a:hover {
+    color: #ff9900;
+}
+
+
+/* boton cerrar el menu */
+.menu-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+
+/* ajuste del contenido */
+.content {
+    margin-top: 100px; /* Espacio para que el header no tape el inicio */
+    padding: 20px;
+    text-align: center;
+}
+
