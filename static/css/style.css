@@ -203,16 +203,21 @@
   .card-title {
     font-size: 1.5rem;
     color: #333;
-    margin: 0;
+    margin: 5;
   }
   
   
-  .card-descrip {
+  .card-descrip{
     font-size: 2rem;
     color: #666;
     line-height: 1.2;
+    margin:0 10px 20px 10px;
     margin-bottom: 25px;
-    margin-top: 10;
+    margin-top: 5px;
+    
+
+    
+    
   }
   
   
@@ -293,5 +298,13 @@
   }
 
   .cuadro-adaptable p{
-      font-size: 14px;
+      font-size: 16px;
   }
+
+.subrayado{
+    text-decoration: underline;
+    text-decoration-color: #f25c05;
+    text-underline-offset: 4px;
+    font-weight: bold;
+    color: black;
+}
