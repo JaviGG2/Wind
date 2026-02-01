@@ -138,3 +138,70 @@
     font-size: 50px;
     cursor: pointer;
 }
+
+.content {
+    margin-top: 50px; /* Espacio para que el header no tape el inicio */
+    padding: 5px;
+    text-align: center;
+    font-size: 20px;
+}
+.content p{
+    margin: 5px 10px 5px;
+    font-size: 15px;
+}
+.content h1{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.contenedor-flexible {
+    display: flex;
+    justify-content: center; /* Centra el cuadro horizontalmente */
+    padding: 20px;
+  }
+  
+  
+  .cuadro-adaptable {
+    /* Tamaño base: ocupa el 90% en móviles, pero máximo 600px en PC */
+    margin-top: 25px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+
+    align-content: center;
+    width: 90%; 
+    max-width: 600px; 
+    
+    /* Estética */
+    background-color: #f4f4f4;
+    padding: 2rem;
+    border-left: 5px solid #f25c05; /* Un toque dorado colonial */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    
+    /* Tipografía fluida */
+    font-family: sans-serif;
+    line-height: 1.6;
+
+    
+  }
+  
+  
+  /* Ajuste opcional para pantallas muy pequeñas */
+  @media (max-width: 480px) {
+    .cuadro-adaptable {
+      padding: 1rem;
+      font-size: 28px;
+    }
+  }
+
+  .cuadro-adaptable p{
+      font-size: 16px;
+  }
+
+  .subrayado{
+    text-decoration: underline;
+    text-decoration-color: #f25c05;
+    text-underline-offset: 5px;
+    font-weight: bold;
+    color: black;
+}
