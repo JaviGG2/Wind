@@ -35,7 +35,7 @@
                 <ul>
                     <li><a href="{{ url_for('index')}}">Inicio</a></li>
                     <li><a href="{{ url_for('calendario')}}">Calendario</a></li>
-                    <li><a href="{{ url_for('juegos')}}">Juegos></li>
+                    <li><a href="{{ url_for('juegos')}}">Juegos</li>
                     
             <li><a href=""><a href="{{ url_for('info')}}">Info</a></li>
                     
@@ -43,14 +43,34 @@
             </nav>
         </div>
     </header>
+    
 
 
+    <div class="imagentop">
+            <img src="{{ url_for('static', filename='img/casco_top.JPG')}}" alt="la imagen de arriba xd">
+        </div>
+
+        <h1 id="titulo">Casco Historico</h1>
     <main class="content">
-        <h1>Casco Historico</h1>
-        <p>Este contenido.</p>
-        <div style="height: 200px; background: linear-gradient(rgb(248, 176, 7), #e07a05);"><p>hola XD
+        
+
+        <div><p>El Casco Colonial de Santa Ana de Coro, capital del estado Falcón, Venezuela, es un tesoro arquitectónico y cultural, declarado Patrimonio de la Humanidad por la UNESCO en 1993, famoso por ser el primer asentamiento perdurable en Tierra Firme, combinando estilos barroco, mudéjar y neoclásico en sus calles, iglesias como San Francisco y San Clemente, y casas coloniales, ofreciendo un viaje por la historia venezolana junto a los impresionantes Médanos de Coro
+        El Casco Histórico de Coro, en el estado Falcón, Venezuela, es un tesoro colonial declarado Patrimonio Cultural de la Humanidad por la UNESCO. Fundada en 1527, fue la primera ciudad de Venezuela y su centro histórico es famoso por sus calles empedradas y edificaciones coloniales únicas, que combinan influencias españolas y locales, destacando por sus grandes ventanas de madera y su rica historia que se puede sentir en cada rincón, siendo un punto clave para el turismo cultural en el país.
         </p>
         </div>
+    </main>
+
+    <main class="caracteristicas">
+
+        <h1>Curiosidades</h1><br>
+        <div><p class="parrafo2">El casco historico se fundo por pimera vez el 26 de julio de 1527 por Juan Martín de Ampíes.</p>
+        <p class="parrafo2">El Casco Historico es reconocido como Patrimonio de la Humanidad por la UNESCO.</p>
+        <p class="parrafo2">En el casco historico puedes encontrar calles coloniales, edificaciones históricas y casas con grandes ventanales de madera.</p>
+        <p class="parrafo2">El casco historico fue el primer asentamiento español en tierra firme de Venezuela y la primera capital, convirtiéndose en un símbolo de la historia y cultura venezolana.</p>
+        </div>
+
+
+
     </main>
 
 
