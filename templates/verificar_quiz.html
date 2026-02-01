@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>coro.</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_juegos.css') }}">
-</head><h1>juegos</h1>
+    <title>Coro.</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_verificar_quiz.css') }}">
+
+</head>
 <body>
-    
+
+
     <header class="navbar">
         <div  class="logo"><a href="{{ url_for('index')}}">
             <img src="{{ url_for('static', filename='img/icons8_left.ico')}}" alt="Logo">
         </a>
             
-            <span class="barra-titulo" >Juegos</span>
+            <span class="barra-titulo" >Casco Historico</span>
         </div>
 
         
@@ -35,7 +38,7 @@
                 <ul>
                     <li><a href="{{ url_for('index')}}">Inicio</a></li>
                     <li><a href="{{ url_for('calendario')}}">Calendario</a></li>
-                    <li><a href="{{ url_for('juegos')}}">Juegos></li>
+                    <li><a href="{{ url_for('juegos')}}">Juegos</a></li>
             <li><a href=""><a href="{{ url_for('info')}}">Info</a></li>
                     
             
@@ -43,31 +46,10 @@
         </div>
     </header>
 
-    <div class="pregunta-global">
-    <h1>Responde el cuestionario</h1>
+    <div class="result">
+        <h1>Tu resultado es {puntos}/{len(preguntas_db)}</h1><a href='/cuestionario'>Volver</a>
+    </div>
     
-    <form  action="/verificar" method="POST">
-        {% for p in preguntas %}
-        <div class="pregunta-card">
-            <h3>{{ loop.index }}. {{ p.pregunta }}</h3>
-            
-            <label>
-                <input type="radio" name="{{ p.id }}" value="A" required> {{ p.opcion_a }}
-            </label><br>
-            
-            <label>
-                <input type="radio" name="{{ p.id }}" value="B"> {{ p.opcion_b }}
-            </label><br>
-            
-            <label>
-                <input type="radio" name="{{ p.id }}" value="C"> {{ p.opcion_c }}
-            </label>
-        </div>
-        <hr>
-        {% endfor %}
-        
-        <button type="submit">Enviar Respuestas</button>
-    </form></div>
 
 
 </body>

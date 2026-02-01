@@ -43,10 +43,9 @@
         </div>
     </header>
 
-    <div class="pregunta-global">
     <h1>Responde el cuestionario</h1>
     
-    <form  action="/verificar" method="POST">
+    <form action="/verificar" method="POST">
         {% for p in preguntas %}
         <div class="pregunta-card">
             <h3>{{ loop.index }}. {{ p.pregunta }}</h3>
@@ -67,7 +66,7 @@
         {% endfor %}
         
         <button type="submit">Enviar Respuestas</button>
-    </form></div>
+    </form>
 
 
 </body>
