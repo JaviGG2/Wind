@@ -44,7 +44,7 @@ p{
     background: linear-gradient(rgb(255, 238, 199), #ffca8e);
     border: 25px;
     border-radius: 30px;
-    margin-top: 15px;
+    margin-top: 0px;
 
     
 }
@@ -146,17 +146,18 @@ p{
 }
 
 .content {
-    margin-top: 100px; /* Espacio para que el header no tape el inicio */
-    padding: 20px;
+    margin-top: 70px; /* Espacio para que el header no tape el inicio */
+    padding: 5px;
     text-align: center;
     border-radius: 12px;
-    background: linear-gradient(rgb(248, 176, 7), #e07a05);
+    background: linear-gradient(#e2dfdb, rgb(229, 185, 83));
     box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-    margin: 40px auto;
-    width: 100%;           /* La caja ahora ocupa el 85% de la pantalla */
+    margin: 15px auto;
+    width:97%;           /* La caja ahora ocupa el 85% de la pantalla */
     max-width: 1000px;    /* Evita que en pantallas muy grandes se estire demasiado */
     border-radius: 15px;  /* (Opcional) Bordes redondeados para que se vea más moderna */
 
+    margin:0 5px 20px 5px;
 }
 
 .caracteristicas {
@@ -169,11 +170,39 @@ p{
     padding: 40px;
     text-align: center;
     border-radius: 12px;
-    background: linear-gradient(rgb(248, 176, 7), #e07a05);
+    background: linear-gradient(rgb(248, 176, 7), #e5dace);
     box-shadow: 0 10px 30px rgba(0,0,0,0.4);
     margin: 40px auto;
     width: 100%;           /* La caja ahora ocupa el 85% de la pantalla */
     max-width: 1000px;    /* Evita que en pantallas muy grandes se estire demasiado */
     border-radius: 15px;  /* (Opcional) Bordes redondeados para que se vea más moderna */
     text-align: center;
+}
+
+.subrayado{
+    text-decoration: underline;
+    text-decoration-color: #f25c05;
+    text-underline-offset: 4px;
+    font-weight: bold;
+    color: black;
+    font-size:25px;
+    margin-bottom: 15px;
+
+}
+
+.dep-2{
+    margin-top: 20%;
+
+
+}
+
+
+
+.img-img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+    margin-top:75px;
+
 }
