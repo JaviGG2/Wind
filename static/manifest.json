@@ -1,0 +1,28 @@
+{
+          
+          
+          "name": "Wind",
+           "short_name": "Wind",
+           "icons": [
+                     {
+                               "src": "/static/img/logo1.png",
+                               "sizes":"192x192",
+                               "type": "image/png"
+
+                     },
+                     {
+                              "src": "/static/img/logo1.png",
+                              "sizes":"512x512",
+                              "type": "image/png"
+                     }
+                    
+           ], 
+
+           "theme_colo": "#ffffff",
+           "background_color": "#ffffff",
+           "display": "standalone"
+          
+
+
+
+}
