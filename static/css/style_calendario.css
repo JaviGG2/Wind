@@ -206,19 +206,16 @@
     color: black;
 }
 
-* {
-    padding: 10px;
-    margin: 0;
-    box-sizing: border-box;
-}
+ 
+
+.
 
 
-
-
-div {
+div .mes {
     text-align: center;
-    width: 300px;
-    font-size: 20px;
+    width: 130px;
+    padding: 30px;
+    
     
     
 }
