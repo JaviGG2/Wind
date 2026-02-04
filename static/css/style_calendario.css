@@ -205,3 +205,162 @@
     font-weight: bold;
     color: black;
 }
+
+* {
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+div {
+    text-align: center;
+    width: 300px;
+    font-size: 20px;
+    
+    
+}
+
+
+ol {
+    list-style: none;
+    display:grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+
+.inicio_enero{
+    grid-column-start: 5;
+}
+
+.dia {
+    background:#f25c05 ;
+    font-weight: bold;
+
+}
+
+.ultimo_dia_enero {
+ grid-column-end: 8;
+}
+
+.inicio_febrero {
+    grid-column-start: 0;
+}
+
+.ultimo_dia_febrero{
+    grid-column-end: 8;
+}
+
+.inicio_marzo {
+    grid-column-start: 0;
+}
+
+.ultimo_dia_marzo{
+    grid-column-end: 4;
+}
+
+.inicio_abril{
+    grid-column-start: 4;
+}
+
+.ultimo_dia_abril{
+    grid-column-end: 6;
+}
+
+.inicio_mayo{
+    grid-column-start: 6;
+}
+
+.ultimo_dia_mayo{
+    grid-column-end:0 ;
+}
+
+
+.inicio_junio{
+    grid-column-start: 2;
+}
+
+.ultimo_dia_junio{
+    grid-column-end: 4;
+}
+.inicio_julio{
+    grid-column-start: 4;
+}
+
+.ultimo_dia_julio{
+    grid-column-end: 7;
+}
+
+.inicio_agosto{
+    grid-column-start: 7;
+}
+
+.ultimo_dia_agosto{
+    grid-column-end: 3;
+}
+.inicio_septiembre{
+    grid-column-start: 3;
+}
+
+.ultimo_dia_septiembre{
+    grid-column-end: 5;
+}
+
+.inicio_octubre{
+    grid-column-start: 5;
+}
+
+.ultimo_dia_octubre{
+    grid-column-end: 8;
+}
+
+.inicio_noviembre{
+    grid-column-start: 1;
+}
+
+.ultimo_dia_noviembre{
+    grid-column-end: 3;
+}
+
+.inicio_diciembre{
+    grid-column-start: 3;
+}
+
+
+
+
+.ultimo_dia_diciembre{
+    grid-column-end: 6;
+}
+
+.festividad{
+
+    color: #F23005;
+}
+
+
+button {
+    width: 150px;
+    height: 50px;
+
+}
+
+.menu{
+    position: relative;
+    display: inline-block;
+}
+
+.lista{
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    
+}
+
+.menu:hover .lista{
+    display: block;
+}
