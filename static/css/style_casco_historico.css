@@ -307,6 +307,9 @@ body {
     gap: 30px;
 }
 
+h3{
+    text-align: center;
+}
 
 .item {
     background: white;
