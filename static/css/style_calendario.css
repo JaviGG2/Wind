@@ -211,7 +211,10 @@
 
  
 
-.
+.dia_importante{
+    color: #f25c05;
+    
+}
 
 
 div .mes {
@@ -335,12 +338,6 @@ ol {
     grid-column-end: 6;
 }
 
-.festividad{
-
-    color: #F23005;
-}
-
-
 button {
     width: 150px;
     height: 50px;
@@ -355,9 +352,9 @@ button {
 .lista{
     display: none;
     position: absolute;
-    background: white;
-    border: 1px solid #ccc;
-    padding: 10px;
+    background: #ffc400;
+    border: 5px solid red;
+    padding: .1px;
     
 }
 

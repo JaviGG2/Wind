@@ -10,7 +10,18 @@
 
 
 
-/* Lo basico de la pagina */
+h1{
+    text-align: center;
+    color: black;
+}
+
+p{
+    padding: 20px;
+    text-align: center;
+    color: black;
+
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +30,6 @@
 }
 
 
-/* Barra de navegacion */
 .navbar {
     position: fixed; /* La hace estática al hacer scroll */
     top: 0;
@@ -35,7 +45,6 @@
     z-index: 1000; /* Siempre por encima de todo */
 }
 
-
 .logo {
     display: flex;
     align-items: center;
@@ -44,9 +53,11 @@
 .barra-titulo{
     font-weight: bold;
     font-size: 20px;
-    background: linear-gradient(rgb(255, 238, 199), #ffca8e);
-    border: 20px;
-
+    margin-bottom: 5px;
+   
+   
+    
+   
 
     
 }
@@ -56,8 +67,6 @@
     margin-right: 10px;
 }
 
-
-/*  BOTÓN DE IMAGEN (ABRIR) */
 .menu-open-btn {
     cursor: pointer;
 }
@@ -74,8 +83,6 @@
     display: none;
 }
 
-
-/*  Menu (apariencia del menu) */
 .menu-overlay {
     position: fixed;
     top: 0;
@@ -93,16 +100,12 @@
     transition: all 0.4s ease;
 }
 
-
-/*  La apertura (esto es con checkbox) */
-/* "Si el input está marcado, muestra el menu" */
 #btn-menu:checked ~ .menu-overlay {
     opacity: 1;
     visibility: visible;
 }
 
 
-/* 6. Etilo del menu interno */
 .menu-links ul {
     list-style: none;
     text-align: center;
@@ -136,4 +139,254 @@
     color: white;
     font-size: 50px;
     cursor: pointer;
+}
+
+.imagentop {
+
+   max-width: 100%;
+   max-height: 100%;
+   height: auto;
+   width: auto;
+
+}
+
+/* Variables */
+:root {
+    --ocre: #f29705;
+    --tierra: #8B4513;
+    --cal: #FDF5E6;
+    --texto: #2C3E50;
+    --blanco: #FFFFFF;
+}
+
+
+/* Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: var(--cal);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+
+/* Navbar */
+.navbar {
+    background: var(--blanco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+.logo {
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: var(--tierra);
+}
+
+
+.logo span { color: var(--ocre); }
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--texto);
+    margin-left: 20px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+
+.nav-links li a:hover {
+    color: var(--ocre);
+}
+
+
+/* Hero */
+.hero {
+
+    
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), 
+                ;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--blanco);
+    padding: 0 20px;
+}
+
+.hero-content{
+    margin-top:100px;
+}
+
+.tag {
+    width:fit-content;
+    margin:0 auto 15px auto;
+    background: var(--ocre);
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    border-radius: 7px;
+    margin-bottom: 15px;
+    display: block;
+    
+}
+
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+
+/* Botones */
+.btn {
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+    display: block !important;
+    transition: 0.3s;
+    width:fit-content;
+    margin:0 auto 15px auto !important;
+
+}
+
+
+.btn-main { background: #f25c05; color: white; }
+.btn-sub { border: 2px solid #f25c05; color: #f25c05; margin-left: 10px; }
+
+
+.btn-main:hover { background: var(--tierra); }
+.btn-sub:hover { background: white; color: var(--texto); }
+
+
+/* Secciones */
+.section { padding: 80px 10%; }
+.title { text-align: center; margin-bottom: 40px; font-size: 2rem; color: var(--tierra); }
+
+
+/* Grid de Monumentos */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+h3{
+    text-align: center;
+}
+
+.item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+
+.item:hover { transform: translateY(-10px); }
+
+
+.item-img {
+    height: 200px;
+    background-color: #ddd;
+    background-size: cover;
+}
+
+
+.img-1 { background-image: url(); }
+.img-2 { background-image: url(); }
+.img-3 { background-image: url(); }
+
+
+.item-text { padding: 20px; }
+.item-text h3 { color: var(--tierra); margin-bottom: 10px; }
+
+
+/* Historia */
+.history-section { background: #eee; padding: 60px 10%; }
+.history-container { max-width: 600px; margin: 0 auto; }
+
+
+.step {
+    border-left: 4px solid var(--ocre);
+    padding-left: 20px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+
+.year {
+    font-weight: 800;
+    color: var(--tierra);
+    display: block;
+    font-size: 1.4rem;
+}
+
+
+.footer {
+    text-align: center;
+    padding: 40px;
+    background: var(--tierra);
+    color: white;
+}
+
+
+/* Menu Mobile sin JS */
+.menu-checkbox, .menu-button { display: none; }
+
+
+@media (max-width: 768px) {
+    .menu-button { display: block; font-size: 1.5rem; cursor: pointer; }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .nav-links li { margin: 10px 0; }
+    /* El truco del checkbox para mostrar el menú */
+    .menu-checkbox:checked ~ .nav-links {
+        display: flex;
+    }
 }
