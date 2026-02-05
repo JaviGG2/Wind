@@ -5,30 +5,14 @@
     <title>Mi Quiz SQL</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
-    <h1>Responde el cuestionario</h1>
     
-    <form action="/verificar" method="POST">
-        {% for p in preguntas %}
-        <div class="pregunta-card">
-            <h3>{{ loop.index }}. {{ p.pregunta }}</h3>
-            
-            <label>
-                <input type="radio" name="{{ p.id }}" value="A" required> {{ p.opcion_a }}
-            </label><br>
-            
-            <label>
-                <input type="radio" name="{{ p.id }}" value="B"> {{ p.opcion_b }}
-            </label><br>
-            
-            <label>
-                <input type="radio" name="{{ p.id }}" value="C"> {{ p.opcion_c }}
-            </label>
-        </div>
-        <hr>
-        {% endfor %}
-        
-        <button type="submit">Enviar Respuestas</button>
-    </form>
+   <div>
+       <h1>Hola</h1>
+       <p>Hola {{ nombre }} que tal</p>
+   </div>
+
+
 </body>
 </html>
