@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coro.</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style-centro_juegos.css') }}">
+
+</head>
+<body>
+
+
+    <header class="navbar">
+        <div  class="logo"><a href="{{ url_for('index')}}">
+            <img src="{{ url_for('static', filename='img/icons8_left.ico')}}" alt="Logo">
+        </a>
+            
+            <span class="barra-titulo" >Juegos</span>
+        </div>
+
+        
+
+
+        <input type="checkbox" id="btn-menu" class="input-hidden">
+        <img src="" alt="">
+
+
+        <label for="btn-menu" class="menu-open-btn">
+            <img src="{{url_for('static', filename='img/icons8_menu.ico')}}" alt="Abrir Menú">
+        </label>
+
+
+        <div class="menu-overlay">
+            <label for="btn-menu" class="menu-close-btn">&times;</label>
+            
+            <nav class="menu-links">
+                <ul>
+                    <li><a href="{{ url_for('index')}}">Inicio</a></li>
+                    <li><a href="{{ url_for('calendario')}}">Calendario</a></li>
+                    <li><a href="{{ url_for('centro_juegos')}}">Juegos</a></li>
+            <li><a href=""><a href="{{ url_for('info')}}">Info</a></li>
+                    
+            
+            </nav>
+        </div>
+    </header>
+
+    <div class="card">
+        <div class="image-container">
+          <img src="{{url_for('static', filename='img/game-lib.png')}}" alt="casco historico" 
+          class="card-image">
+        </div>
+        <div class="card-container">
+          <h3 class="card-tittle">Quiz</h3>
+          <p class="card-descrip">Pon a prueba tu conocimiento sobre el Casco Historico de Santa Ana de Coro 
+          </p>
+          <a href="{{ url_for('juegos')}}" class="card-button"> Jugar Ahora</a>
+        </div>
+  
+      </div>
+
+    
+
+    
+
+
+    
+
+</body>
+</html>
+

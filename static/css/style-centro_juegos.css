@@ -1,0 +1,239 @@
+/*Esto es para eliminar la marca azul en la web*/
+*{
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+*:focus{
+    outline: none;
+    
+}
+
+
+
+/* Lo basico de la pagina */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Barra de navegacion */
+.navbar {
+    position: fixed; /* La hace estática al hacer scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between; /* Logo a la izquierda, botón a la derecha */
+    align-items: center;
+    padding: 0 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000; /* Siempre por encima de todo */
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.barra-titulo{
+    font-weight: bold;
+    font-size: 22px;
+    
+    border: 20px;
+
+
+    
+}
+
+.logo img {
+    height: 30px; /* Tamaño del logo */
+    margin-right: 10px;
+}
+
+
+/*  BOTÓN DE IMAGEN (ABRIR) */
+.menu-open-btn {
+    cursor: pointer;
+}
+
+
+.menu-open-btn img {
+    height: 30px; /* Tamaño del botón del menú */
+    display: block;
+}
+
+
+/* Ocultamos el checkbox */
+.input-hidden {
+    display: none;
+}
+
+
+/*  Menu (apariencia del menu) */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 137, 2); /* Fondo del menu*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Inicialmente oculto */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+
+/*  La apertura (esto es con checkbox) */
+/* "Si el input está marcado, muestra el menu" */
+#btn-menu:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* 6. Etilo del menu interno */
+.menu-links ul {
+    list-style: none;
+    text-align: center;
+}
+
+
+.menu-links li {
+    margin: 20px 0;
+}
+
+
+.menu-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+
+.menu-links a:hover {
+    color: #ffc400;
+}
+
+
+/* BOTÓN CERRAR (X) */
+.menu-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+
+/*  AJUSTE DEl CONTENIDO */
+.card {
+    width: 90%;          /* En móvil ocupa casi todo el ancho */
+    max-width: 450px;     /* En PC no se vuelve gigante, mantiene tamaño elegante */
+    margin: 26px auto;    /* Centra la tarjeta en la pantalla */
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;     /* Corta los bordes de la imagen para que sigan el radio */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    margin-top: 150px;
+  }
+  
+  
+  .card:hover {
+    transform: translateY(-5px); /* Efecto sutil al pasar el mouse */
+  }
+  
+  
+  /* Contenedor de Imagen */
+  .image-container {
+    width: 95%;
+    height: 95%;
+    left:95px;        /* Altura fija para la foto para que todas las cards sean iguales */
+  }
+  
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* La imagen llena el espacio sin deformarse */
+    display: block;
+  }
+  
+  
+  /* El contenido (Texto y Botón) */
+  .card-container {
+    padding: 30spx;
+    text-align: center;   /* Centra todo el texto y el botón */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;            /* Crea espacio uniforme entre elementos */
+  }
+  
+  
+  .card-title {
+    margin-top:20px;
+    text-align:center;
+    font-size: 1.5rem;
+    color: #333;
+    margin: 20px 12px 20px;
+  }
+  
+  
+  .card-descrip{
+    font-size: 2rem;
+    color: #666;
+    line-height: 1.2;
+    margin:0 10px 20px 10px;
+    margin-bottom: 25px;
+    margin-top: 5px;
+    
+
+    
+    
+  }
+  
+  
+  /* El Botón */
+  .card-button {
+    margin-top:2px;
+    margin-bottom:19px;
+    box-shadow: 6px 5px 15px ;
+    font-size: 16px;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #f25c05; /* El naranja de tu logo */
+    color: white;
+    text-decoration: none;
+    border-radius: 35px;
+    font-weight: bold;
+    align-self: center;   /* Centra solo el botón */
+    transition: background 0.3s;
+  }
+  
+  
+  .card-button:hover {
+    background-color: #f23005;
+    box-shadow:rgb(255, 137, 2);
+    transition: 0.2s ease-out;
+}
+
+
+
+

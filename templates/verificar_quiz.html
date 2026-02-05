@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coro.</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_verificar_quiz.css') }}">
-    <link rel="stylesheet" href="{{ url_for('crear_db') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_juegos.css') }}">
+    
 
 </head>
 <body>
@@ -39,7 +39,7 @@
                 <ul>
                     <li><a href="{{ url_for('index')}}">Inicio</a></li>
                     <li><a href="{{ url_for('calendario')}}">Calendario</a></li>
-                    <li><a href="{{ url_for('juegos')}}">Juegos</a></li>
+                    <li><a href="{{ url_for('centro_juegos')}}">Juegos</a></li>
             <li><a href=""><a href="{{ url_for('info')}}">Info</a></li>
                     
             
@@ -47,9 +47,87 @@
         </div>
     </header>
 
-    <div class="result">
-        <h1>Tu resultado es {puntos}/{len(preguntas_db)}</h1><a href='/cuestionario'>Volver</a>
+    
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-chart-line"></i> Resultados del Quiz</h1>
+            <p class="subtitle">Aquí están tus resultados</p>
+        </header>
+        
+        <main>
+            <div class="result-summary">
+                <div class="score-card {% if percentage >= 70 %}high-score{% elif percentage >= 40 %}medium-score{% else %}low-score{% endif %}">
+                    <div class="score-circle">
+                        <div class="score-value">{{ score }}/{{ total }}</div>
+                        <div class="score-percentage">{{ "%.1f"|format(percentage) }}%</div>
+                    </div>
+                    
+                    <div class="score-message">
+                        {% if percentage >= 90 %}
+                        <h3><i class="fas fa-trophy"></i> ¡Excelente!</h3>
+                        <p>Se ve que has disfrutado conocer a Coro.</p>
+                        {% elif percentage >= 70 %}
+                        <h3><i class="fas fa-star"></i> ¡Muy bien!</h3>
+                        <p>Tienes un buen conocimiento de Coro.</p>
+                        {% elif percentage >= 40 %}
+                        <h3><i class="fas fa-check-circle"></i> No está mal</h3>
+                        <p>Sique arquiriendo conocimiento en Wind.</p>
+                        {% else %}
+                        <h3><i class="fas fa-book"></i> Sigue aprendiendo</h3>
+                        <p>Es una buena oportunidad para sequir aprendiendo.</p>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="results-details">
+                    <h3><i class="fas fa-clipboard-list"></i> Detalle de respuestas:</h3>
+                    
+                    {% for result in results %}
+                    <div class="result-item {% if result.is_correct %}correct{% else %}incorrect{% endif %}">
+                        <div class="result-question">
+                            <strong>Pregunta {{ loop.index }}:</strong> {{ result.question }}
+                        </div>
+                        <div class="result-answers">
+                            <div class="user-answer">
+                                <span class="answer-label">Tu respuesta:</span>
+                                <span class="answer-value">{{ result.user_answer if result.user_answer else "Sin responder" }}</span>
+                            </div>
+                            {% if not result.is_correct %}
+                            <div class="correct-answer">
+                                <span class="answer-label">Respuesta correcta:</span>
+                                <span class="answer-value">{{ result.correct_answer }}</span>
+                            </div>
+                            {% endif %}
+                        </div>
+                        <div class="result-status">
+                            {% if result.is_correct %}
+                            <span class="status-correct"><i class="fas fa-check"></i> Correcta</span>
+                            {% else %}
+                            <span class="status-incorrect"><i class="fas fa-times"></i> Incorrecta</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            
+            <div class="result-actions">
+                <a href="/restart" class="btn-restart">
+                    <i class="fas fa-play-circle"></i> Jugar Otra Vez
+                </a>
+                <a href="/" class="btn-home">
+                    <i class="fas fa-home"></i> Volver al Inicio
+                </a>
+            </div>
+        </main>
+        
+        
     </div>
+</body>
+</html>
+
+    
     
 
 

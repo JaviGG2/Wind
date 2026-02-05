@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>coro.</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style_juegos.css') }}">
-</head><h1>juegos</h1>
+</head><h1></h1>
 <body>
     
     <header class="navbar">
@@ -35,7 +35,7 @@
                 <ul>
                     <li><a href="{{ url_for('index')}}">Inicio</a></li>
                     <li><a href="{{ url_for('calendario')}}">Calendario</a></li>
-                    <li><a href="{{ url_for('juegos')}}">Juegos></li>
+                    <li><a href="{{ url_for('juegos')}}">Juegos</li>
             <li><a href=""><a href="{{ url_for('info')}}">Info</a></li>
                     
             
@@ -43,31 +43,76 @@
         </div>
     </header>
 
-    <div class="pregunta-global">
-    <h1>Responde el cuestionario</h1>
     
-    <form  action="/verificar" method="POST">
-        {% for p in preguntas %}
-        <div class="pregunta-card">
-            <h3>{{ loop.index }}. {{ p.pregunta }}</h3>
-            
-            <label>
-                <input type="radio" name="{{ p.id }}" value="A" required> {{ p.opcion_a }}
-            </label><br>
-            
-            <label>
-                <input type="radio" name="{{ p.id }}" value="B"> {{ p.opcion_b }}
-            </label><br>
-            
-            <label>
-                <input type="radio" name="{{ p.id }}" value="C"> {{ p.opcion_c }}
-            </label>
-        </div>
-        <hr>
-        {% endfor %}
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-brain"></i> Quiz Game</h1>
+            <p class="subtitle">Demuestra tus conocimientos con este divertido quiz</p>
+        </header>
         
-        <button type="submit">Enviar Respuestas</button>
-    </form></div>
+        <main>
+            <div class="quiz-header">
+                <div class="stats">
+                    <span><i class="fas fa-question-circle"></i> {{ questions|length }} preguntas</span>
+                    <span><i class="fas fa-clock"></i> Tiempo estimado: 5 min</span>
+                </div>
+                <div class="instructions">
+                    <p><i class="fas fa-info-circle"></i> Selecciona la respuesta correcta para cada pregunta.</p>
+                </div>
+            </div>
+            
+            <form action="/submit" method="POST" class="quiz-form">
+                {% for question in questions %}
+                <div class="question-card">
+                    <div class="question-header">
+                        <span class="question-number">Pregunta {{ question.id }}</span>
+                        <span class="points">1 punto</span>
+                    </div>
+                    
+                    <h3 class="question-text">{{ question.question }}</h3>
+                    
+                    <div class="options">
+                        {% for option in question.options %}
+                        <div class="option">
+                            <input type="radio" 
+                                   id="q{{ question.id }}_{{ loop.index }}" 
+                                   name="{{ question.id }}" 
+                                   value="{{ option }}" 
+                                   required>
+                            <label for="q{{ question.id }}_{{ loop.index }}">
+                                <span class="option-letter">{{ ['A', 'B', 'C', 'D'][loop.index0] }}</span>
+                                <span class="option-text">{{ option }}</span>
+                            </label>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-paper-plane"></i> Enviar Respuestas
+                    </button>
+                    <button type="reset" class="btn-reset">
+                        <i class="fas fa-redo"></i> Limpiar Todo
+                    </button>
+                </div>
+            </form>
+            
+            <div class="footer-note">
+                <p><i class="fas fa-lightbulb"></i> <strong>Consejo:</strong> Lee cada pregunta cuidadosamente antes de responder.</p>
+            </div>
+        </main>
+        
+        
+    </div>
+</body>
+</html>
+
+   
+        
+      
 
 
 </body>
