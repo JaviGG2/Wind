@@ -213,7 +213,8 @@
 
 .dia_importante{
     color: #f25c05;
-    
+    background: #ffeb35;
+    border-radius: 50%;
 }
 
 
@@ -241,6 +242,7 @@ ol {
 .dia {
     background:#f25c05 ;
     font-weight: bold;
+    border-radius: 5px;
 
 }
 
@@ -339,23 +341,27 @@ ol {
 }
 
 button {
-    width: 150px;
+    width: 200px;
     height: 50px;
+    background: #ffca8e;
+    border-radius: 15px;
+    margin: 15px;
 
 }
 
 .menu{
     position: relative;
     display: inline-block;
+   
 }
 
 .lista{
     display: none;
-    position: absolute;
+    position: relative;
     background: #ffc400;
     border:  solid ;
     padding: .1px;
-    
+   
 }
 
 .menu:hover .lista{
