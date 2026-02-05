@@ -308,3 +308,10 @@
     font-weight: bold;
     color: black;
 }
+
+.game-brain{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* La imagen llena el espacio sin deformarse */
+    display: block;
+}
