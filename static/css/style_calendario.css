@@ -16,6 +16,7 @@
 
 /* Lo basico de la pagina */
 * {
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -212,9 +213,10 @@
  
 
 .dia_importante{
-    color: #f25c05;
-    background: #ffeb35;
-    border-radius: 50%;
+    color: #000000;
+    background: #f28705;
+    border-radius: 20px;
+    font-weight: bold;
 }
 
 
@@ -232,6 +234,18 @@ ol {
     list-style: none;
     display:grid;
     grid-template-columns: repeat(7, 1fr);
+    background: whitesmoke;
+    box-shadow: 0 15px 15px  rgba(75, 2, 2, 0.336);
+    border-radius: 10px;
+   
+
+}
+
+li {
+    margin: 0 0 18px 0;
+    box-shadow: 0 .2px .2px ;
+    
+    
 }
 
 
@@ -242,7 +256,9 @@ ol {
 .dia {
     background:#f25c05 ;
     font-weight: bold;
-    border-radius: 5px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    
 
 }
 
@@ -343,16 +359,18 @@ ol {
 button {
     width: 200px;
     height: 50px;
-    background: #ffca8e;
+    background: linear-gradient(to right,  #f25c05, #f29705);
     border-radius: 15px;
     margin: 15px;
+    color: #e6e6e6;
 
 }
 
 .menu{
     position: relative;
     display: inline-block;
-   
+    
+    
 }
 
 .lista{
@@ -361,9 +379,24 @@ button {
     background: #ffc400;
     border:  solid ;
     padding: .1px;
+    font-weight: bold;
+    
+    border-radius: 5px;
+    margin: 0 0 5px;
    
 }
 
 .menu:hover .lista{
     display: block;
+    
+
+}
+
+div .lista p {
+    box-shadow: 0 .2px .2px ;
+}
+
+
+body {
+    background: #e6e6e6;
 }
