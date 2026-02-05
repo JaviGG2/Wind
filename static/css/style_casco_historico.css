@@ -330,9 +330,25 @@ h3{
 }
 
 
-.img-1 { background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=600'); }
-.img-2 { background-image: url('https://images.unsplash.com/photo-1548013146-72479768bbaa?q=80&w=600'); }
-.img-3 { background-image: url('https://images.unsplash.com/photo-1596403243734-93e18501e389?q=80&w=600'); }
+.img-1 {
+    background-image: url('https://costadevenezuela.com/wp-content/uploads/2009/05/img_9274.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 250px; 
+}
+.img-2 { background-image: url('https://iamvenezuela.org/wp-content/uploads/sites/4/2017/01/cruz-de-san-clemente2.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 250px; 
+}
+.img-3 { background-image: url('https://artecolonial.wordpress.com/wp-content/uploads/2011/04/catedral-de-coro-venezuela.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 250px;
+}
 
 
 .item-text { padding: 20px; }

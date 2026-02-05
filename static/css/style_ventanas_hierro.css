@@ -330,9 +330,24 @@ h3{
 }
 
 
-.img-1 { background-image: url(); }
-.img-2 { background-image: url(); }
-.img-3 { background-image: url(); }
+.img-1 { background-image: url('https://cdn.yoo.rs/uploads/157996/blog/casa-de-las-ventanas-de-hierro-1631706274.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 250px;
+}
+.img-2 { background-image: url('https://cdn.yoo.rs/uploads/157996/images/1631705794-01.1.jpg?_gl=1*1lny0x0*_ga*MTQ3NjcwMTQ0OS4xNzcwMzEyODYz*_ga_6Z7SYN06FN*czE3NzAzMTI4NjIkbzEkZzEkdDE3NzAzMTI4NjMkajYwJGwwJGgw'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 250px;
+}
+.img-3 { background-image: url('https://cdn.yoo.rs/uploads/157996/images/1631705702-01.2.jpg?_gl=1*xp77jz*_ga*MTQ3NjcwMTQ0OS4xNzcwMzEyODYz*_ga_6Z7SYN06FN*czE3NzAzMTI4NjIkbzEkZzEkdDE3NzAzMTI4NjMkajYwJGwwJGgw'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 250px;
+}
 
 
 .item-text { padding: 20px; }

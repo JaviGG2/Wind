@@ -330,9 +330,24 @@ h3{
 }
 
 
-.img-1 { background-image: url(); }
-.img-2 { background-image: url(); }
-.img-3 { background-image: url(); }
+.img-1 { background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/e4/19/e3/20180119-131425-largejpg.jpg?w=800&h=-1&s=1'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 250px;
+}
+.img-2 { background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/e4/19/e0/20180119-131303-largejpg.jpg?w=1100&h=-1&s=1'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 250px;
+}
+.img-3 { background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/e4/19/e1/20180119-130715-largejpg.jpg?w=800&h=-1&s=1'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 250px;
+}
 
 
 .item-text { padding: 20px; }
