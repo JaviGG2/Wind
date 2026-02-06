@@ -172,6 +172,7 @@
   
   .card:hover {
     transform: translateY(-5px); /* Efecto sutil al pasar el mouse */
+    box-shadow: 0 10px 20px rgba(250, 103, 5, 0.1);
   }
   
   

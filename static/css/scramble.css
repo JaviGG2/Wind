@@ -1,0 +1,410 @@
+/*Esto es para eliminar la marca azul en la web*/
+*{
+    -webkit-tap-highlight-color: transparent;
+
+}
+
+*:focus{
+    outline: none;
+    
+}
+
+
+
+/* Lo basico de la pagina */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Barra de navegacion */
+.navbar {
+    position: fixed; /* La hace estática al hacer scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between; /* Logo a la izquierda, botón a la derecha */
+    align-items: center;
+    padding: 0 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000; /* Siempre por encima de todo */
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.barra-titulo{
+    font-weight: bold;
+    font-size: 22px;
+    
+    border: 20px;
+
+
+    
+}
+
+.logo img {
+    height: 30px; /* Tamaño del logo */
+    margin-right: 10px;
+}
+
+
+/*  BOTÓN DE IMAGEN (ABRIR) */
+.menu-open-btn {
+    cursor: pointer;
+}
+
+
+.menu-open-btn img {
+    height: 30px; /* Tamaño del botón del menú */
+    display: block;
+}
+
+
+/* Ocultamos el checkbox */
+.input-hidden {
+    display: none;
+}
+
+
+/*  Menu (apariencia del menu) */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 137, 2); /* Fondo del menu*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Inicialmente oculto */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+
+/*  La apertura (esto es con checkbox) */
+/* "Si el input está marcado, muestra el menu" */
+#btn-menu:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* 6. Etilo del menu interno */
+.menu-links ul {
+    list-style: none;
+    text-align: center;
+}
+
+
+.menu-links li {
+    margin: 20px 0;
+}
+
+
+.menu-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+
+.menu-links a:hover {
+    color: #ffc400;
+}
+
+
+/* BOTÓN CERRAR (X) */
+.menu-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+
+/* static/scramble.css */
+
+
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background:#f2ca99;
+    color: black;
+    padding: 0px;
+    text-align: center;
+    margin: 2px;
+    min-height: 100vh;
+    margin-top:100px;
+}
+
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background:white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Títulos */
+h1 {
+    color: black;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+
+/* Instrucciones */
+.instrucciones {
+    background: #f28705;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+    text-align: left;
+}
+
+
+.instrucciones p {
+    margin: 0;
+}
+
+
+/* Tarjetas de palabras */
+.palabra-card {
+    background: white;
+    color: #f25c05;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.palabra-card h3 {
+    margin-top: 0;
+    color: #f25c05;
+    border-bottom: 2px solid #f25c05;
+    padding-bottom: 10px;
+}
+
+
+.letras-mezcladas {
+    font-size: 28px;
+    font-weight: bold;
+    color: #f25c05;
+    letter-spacing: 8px;
+    padding: 15px;
+    background: #dd990849;
+    border-radius: 8px;
+    margin: 15px 0;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+}
+
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid #f25c05;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+
+input:focus {
+    outline: none;
+    border-color: #f25c05;
+    box-shadow: 0 0 10px #f25c05;
+}
+
+
+/* Botones */
+.btn-verificar {
+    background: #f28705;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: bold;
+    box-shadow: 0 3px 10px white;
+    transition: all 0.3s;
+}
+
+
+.btn-verificar:hover {
+    background: #f23005;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Enlace volver */
+.volver {
+    display: inline-block;
+    margin-top: 25px;
+    color: #f25c05;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid#f25c05;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+
+.volver:hover {
+    background: #f23005;
+    color: white;
+}
+
+
+/* Resultados */
+.puntuacion {
+    font-size: 28px;
+    text-align: center;
+    margin: 25px 0;
+    color: #f25c05;
+    font-weight: bold;
+    padding: 15px;
+    background: rgba(46, 204, 113, 0.1);
+    border-radius: 10px;
+}
+
+
+.resultado-item {
+    margin-top:40px;
+    background: white;
+    color: #2c3e50;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    border-left: 6px solid #f25c05;
+    text-align: left;
+    box-shadow:0 5px 15px #f25c0558;
+}
+
+
+.resultado-item.correcto {
+    border-left-color: #2ecc71;
+}
+
+
+.letras-original {
+    font-weight: bold;
+    color: #e74c3c;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.tu-respuesta {
+    color: #3498db;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.respuesta-correcta {
+    color: #2ecc71;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/* Botones de acción */
+.acciones {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.btn {
+    background: #f25c05;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+
+.btn:hover {
+    background: #f28705;
+    transform: translateY(-2px);
+    box-shadow:0 5px 10px #f25c05;
+}
+
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+        margin: 10px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .letras-mezcladas {
+        font-size: 22px;
+        letter-spacing: 5px;
+        padding: 10px;
+    }
+    
+    .btn {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
+    
+    .acciones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -74,7 +74,7 @@ QUIZ_QUESTIONS = [
     },
     {
         "id": 5,
-        "question": "¿Cual es la tecnica de construcción tradicionales se preservan activamente hoy en dia en Coro'?",
+        "question": "¿Cual es la tecnica de construcCión tradicionales se preservan activamente hoy en dia en Coro'?",
         "options": ["Tallado de piedras volcánicas", "Uso de estructura de acero y hormigón", "Construcción en tierra (adobe y tapia)",
          "Arquitectura de vidrio y madera"],
         "correct_answer": "Construcción en tierra (adobe y tapia)"
@@ -126,7 +126,52 @@ def restart():
     return redirect(url_for('juegos'))
 
 
+#segundo juegos
 
+# index.py - Añadir después de las rutas existentes
+
+
+PALABRAS_SCRAMBLE = [
+    {"palabra": "HIERRO", "mezclada": "IRHREO"},
+    {"palabra": "ADOBE", "mezclada": "BADEO"},
+    {"palabra": "BALCÓN", "mezclada": "ÓBLCNA"},
+    {"palabra": "BARRO", "mezclada": "RBROA"},
+    {"palabra": "ARTE", "mezclada": "ETAR"},
+]
+
+
+@app.route('/scramble')
+def scramble():
+    """Juego de palabras mezcladas"""
+    return render_template('scramble.html', palabras=PALABRAS_SCRAMBLE)
+
+
+@app.route('/verificar_scramble', methods=['POST'])
+def verificar_scramble():
+    """Verifica las respuestas del scramble"""
+    correctas = 0
+    resultados = []
+    
+    for i in range(len(PALABRAS_SCRAMBLE)):
+        respuesta = request.form.get(f'respuesta_{i}', '').upper().strip()
+        palabra_real = PALABRAS_SCRAMBLE[i]['palabra']
+        mezclada = PALABRAS_SCRAMBLE[i]['mezclada']
+        
+        es_correcta = respuesta == palabra_real
+        if es_correcta:
+            correctas += 1
+            
+        resultados.append({
+            'mezclada': mezclada,
+            'respuesta': respuesta,
+            'correcta': palabra_real,
+            'es_correcta': es_correcta
+        })
+    
+    return render_template('resultado_scramble.html',
+                         correctas=correctas,
+                         total=len(PALABRAS_SCRAMBLE),
+                         resultados=resultados)
 
 
 if __name__ == '__main__':

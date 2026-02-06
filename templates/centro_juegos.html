@@ -45,6 +45,10 @@
         </div>
     </header>
 
+    <main class="selec-title">
+        <h1>Selecciona para jugar</h1>
+    </main>
+
     <div class="card">
         <div class="image-container">
           <img src="{{url_for('static', filename='img/game-lib.png')}}" alt="casco historico" 
@@ -55,6 +59,20 @@
           <p class="card-descrip">Pon a prueba tu conocimiento sobre el Casco Historico de Santa Ana de Coro 
           </p>
           <a href="{{ url_for('juegos')}}" class="card-button"> Jugar Ahora</a>
+        </div>
+  
+      </div>
+
+      <div class="card">
+        <div class="image-container">
+          <img src="{{url_for('static', filename='img/game_brain.png')}}" alt="casco historico" 
+          class="card-image">
+        </div>
+        <div class="card-container">
+          <h3 class="card-tittle">Memoria</h3>
+          <p class="card-descrip">Pon a prueba tu conocimiento sobre el Casco Historico de Santa Ana de Coro 
+          </p>
+          <a href="{{ url_for('scramble')}}" class="card-button"> Jugar Ahora</a>
         </div>
   
       </div>

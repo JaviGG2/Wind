@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coro.</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/scramble.css') }}">
+
+</head>
+<body>
+
+
+    <header class="navbar">
+        <div  class="logo"><a href="{{ url_for('index')}}">
+            <img src="{{ url_for('static', filename='img/icons8_left.ico')}}" alt="Logo">
+        </a>
+            
+            <span class="barra-titulo" >Scramble</span>
+        </div>
+
+        
+
+
+        <input type="checkbox" id="btn-menu" class="input-hidden">
+        <img src="" alt="">
+
+
+        <label for="btn-menu" class="menu-open-btn">
+            <img src="{{url_for('static', filename='img/icons8_menu.ico')}}" alt="Abrir Menú">
+        </label>
+
+
+        <div class="menu-overlay">
+            <label for="btn-menu" class="menu-close-btn">&times;</label>
+            
+            <nav class="menu-links">
+                <ul>
+                    <li><a href="{{ url_for('index')}}">Inicio</a></li>
+                    <li><a href="{{ url_for('calendario')}}">Calendario</a></li>
+                    <li><a href="{{ url_for('juegos')}}">Juegos</a></li>
+            <li><a href=""><a href="{{ url_for('info')}}">Info</a></li>
+                    
+            
+            </nav>
+        </div>
+    </header>
+
+    
+    
+    
+        <div class="container">
+            <h1>Resultados Scramble</h1>
+            
+            <div class="puntuacion">
+                Acertaste: {{ correctas }}/{{ total }}
+                ({{ "%.0f"|format((correctas/total)*100) }}%)
+            </div>
+            
+            {% for resultado in resultados %}
+            <div class="resultado-item {% if resultado.es_correcta %}correcto{% endif %}">
+                <p><strong>Letras mezcladas:</strong> 
+                   <span class="letras-original">{{ resultado.mezclada }}</span>
+                </p>
+                <p><strong>Tu respuesta:</strong> 
+                   <span class="tu-respuesta">{{ resultado.respuesta }}</span>
+                </p>
+                {% if not resultado.es_correcta %}
+                <p><strong>Correcto:</strong> 
+                   <span class="respuesta-correcta">{{ resultado.correcta }}</span>
+                </p>
+                {% endif %}
+                <p>
+                    {% if resultado.es_correcta %}
+                    <span style="color: #2ecc71;">Correcto</span>
+                    {% else %}
+                    <span style="color: #e74c3c;">Incorrecto</span>
+                    {% endif %}
+                </p>
+            </div>
+            {% endfor %}
+            
+            <div class="acciones">
+                <a href="/scramble" class="btn">Jugar Otra Vez</a>
+                <a href="/" class="btn">Abandonar</a>
+            </div>
+        </div>
+    
+    
+
+</body>
+</html>
+
