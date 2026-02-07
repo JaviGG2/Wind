@@ -49,7 +49,7 @@ QUIZ_QUESTIONS = [
         "id": 1,
         "question": "¿En que año fue fundada la ciudad de Santa Ana de Coro por Juan de Ampies?",
         "options": ["1492", "1567", "1527", "1993"],
-        "correct_answer": "1993"
+        "correct_answer": "1527"
     },
     {
         "id": 2,
@@ -74,7 +74,7 @@ QUIZ_QUESTIONS = [
     },
     {
         "id": 5,
-        "question": "¿Cual es la tecnica de construcCión tradicionales se preservan activamente hoy en dia en Coro'?",
+        "question": "¿Cual es la tecnica de construcción tradicionales se preservan activamente hoy en dia en Coro?",
         "options": ["Tallado de piedras volcánicas", "Uso de estructura de acero y hormigón", "Construcción en tierra (adobe y tapia)",
          "Arquitectura de vidrio y madera"],
         "correct_answer": "Construcción en tierra (adobe y tapia)"

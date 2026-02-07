@@ -48,18 +48,15 @@ p{
 .logo {
     display: flex;
     align-items: center;
+    background: linear-gradient(to right,  #f25005, #f25c05);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .barra-titulo{
     font-weight: bold;
     font-size: 20px;
-    margin-bottom: 5px;
-   
-   
-    
-   
-
-    
+    margin-bottom: 5px;  
 }
 
 .logo img {
@@ -89,7 +86,7 @@ p{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(255, 137, 2); /* Fondo del menu*/
+    background-color:  #f25c05ec; /* Fondo del menu*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -307,6 +304,16 @@ body {
     gap: 30px;
 }
 
+/* Seleccionamos el enlace por su clase o etiqueta */
+a {
+    color: #964B00;          /* El color marrón del título derecho */
+    text-decoration: none;   /* Quita la línea azul de abajo */
+    font-weight: bold;       /* Lo hace negrita para que resalte igual */
+    display: block;          /* Permite que el centrado funcione mejor */
+    text-align: center;      /* Centra el texto */
+    font-size: 1.2em;        /* Ajusta el tamaño según necesites */
+}
+
 h3{
     text-align: center;
 }
@@ -337,13 +344,13 @@ h3{
     background-repeat: no-repeat;
     height: 250px; 
 }
-.img-2 { background-image: url('https://iamvenezuela.org/wp-content/uploads/sites/4/2017/01/cruz-de-san-clemente2.jpg'); 
+.img-2 { background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgsezNRJO7uSlGyvj5la2jnjeSZVa0i_8LVerc7VnkoaIk_oAKSwVWtB-Qc8BX90WSKKBz-x1o7R1oo6uRTpq1vrb0I1cxezoOlwN5LQDRDKzM1xXeEJxLaBVEV7Ef5pY_pyDtbfIRPuCdX/s1600/Balcon+de+los+Arcaya.jpg'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
     height: 250px; 
 }
-.img-3 { background-image: url('https://artecolonial.wordpress.com/wp-content/uploads/2011/04/catedral-de-coro-venezuela.jpg'); 
+.img-3 { background-image: url('https://images.hive.blog/p/C3TZR1g81UNaPs7vzNXHueW5ZM76DSHWEY7onmfLxcK2iPe5ScrboGVji8f5EMQwRbHTd2ynP4podPfGjyuqN9x6ounLrnpi3EojBvHQwCMyH8va9Z7erg6?format=match&mode=fit'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;

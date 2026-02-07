@@ -83,7 +83,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(255, 137, 2); /* Fondo del menu*/
+    background-color:  #f25c05ec; /* Fondo del menu*/
     display: flex;
     justify-content: center;
     align-items: center;
