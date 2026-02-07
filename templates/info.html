@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coro.</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style-info.css') }}">
-
+    <link rel="icon" href="{{ url_for('static', filename='img/logo2.png')}}">
 </head>
 <body>
 
@@ -15,7 +15,7 @@
             <img src="{{ url_for('static', filename='img/icons8_left.ico')}}" alt="Logo">
         </a>
             
-            <span class="barra-titulo" >Casco Historico</span>
+            <span class="barra-titulo" >Información</span>
         </div>
 
         
@@ -46,32 +46,42 @@
     </header>
 
 
-    <main class="content">
-        <h1>Casco Historico</h1>
-        <p>Este contenido.</p>
-        <div style="height: 200px; background: linear-gradient(rgb(248, 176, 7), #e07a05);"><p>El Casco Colonial de Santa Ana de Coro, capital del estado Falcón, Venezuela, es un tesoro arquitectónico y cultural, declarado Patrimonio de la Humanidad por la UNESCO en 1993, famoso por ser el primer asentamiento perdurable en Tierra Firme, combinando estilos barroco, mudéjar y neoclásico en sus calles, iglesias como San Francisco y San Clemente, y casas coloniales, ofreciendo un viaje por la historia venezolana junto a los impresionantes Médanos de Coro
-        El Casco Histórico de Coro, en el estado Falcón, Venezuela, es un tesoro colonial declarado Patrimonio Cultural de la Humanidad por la UNESCO. Fundada en 1527, fue la primera ciudad de Venezuela y su centro histórico es famoso por sus calles empedradas y edificaciones coloniales únicas, que combinan influencias españolas y locales, destacando por sus grandes ventanas de madera y su rica historia que se puede sentir en cada rincón, siendo un punto clave para el turismo cultural en el país.
-        </p>
-        </div>
-    </main>
-
     <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    
-    <h1>Mi Progreso</h1>
-    
-    <p>XP Total: {{ xp_total }}/100</p>
-    
-    <div style="width: 300px; background: #ddd; border-radius: 10px;">
-        <div style="width: {{ xp_total }}%; background: green; height: 20px; border-radius: 10px;"></div>
-    </div>
-    
-    <p>{{ xp_total }}% completado</p>
-    
-    <br>
-    <a href="/game">Volver al juego</a>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Wind - Equipo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+<body>
+
+    <div class="panel-container">
+        <header class="panel-header">
+            <h1>Proyecto: Wind</h1>
+            <div class="status-badge">Activo</div>
+        </header>
+
+        <section class="team-section">
+            <h3>Equipo de Desarrollo</h3>
+            <ul class="member-list">
+                <li><span>👤</span> Javier Garcia</li>
+                <li><span>👤</span> Abraham Goitia</li>
+                <li><span>👤</span> Armando Palombo</li>
+                <li><span>👤</span> Anyuil Daal</li>
+            </ul>
+        </section>
+
+        <footer class="panel-footer">
+            <a href="https://github.com/JaviGG2/Wind" target="_blank" class="btn-github">
+                Acceder al Repositorio
+            </a>
+           <h1 class="repo" href="https://github.com/JaviGG2/Wind">https://github.com/JaviGG2/Wind</h1>
+        </footer>
+    </div>
+
+</body>
+</html>
 
 
 </body>
