@@ -213,15 +213,18 @@
 
 .dia_importante{
     color: #f25c05;
-    background: #ffeb35;
-    border-radius: 50%;
+    background: #f25c0549;
+    border-radius: 20px;
+    padding: 5px
 }
 
 
 div .mes {
     text-align: center;
-    width: 130px;
-    padding: 30px;
+    margin: 20px auto;
+    width: fit-content;
+    margin:5px 10px 5px;
+    padding: 20px;
     
     
     
@@ -231,7 +234,13 @@ div .mes {
 ol {
     list-style: none;
     display:grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(7, 35px);
+    gap: 5px 0; /* Espacio pequeño entre filas */
+    padding: 0;
+    margin: 0 auto; /* Centra la cuadrícula dentro del div .mes */
+    justify-items: center; /* Centra el contenido de cada celda */
+    grid-template-columns: repeat(7, 40px);
+
 }
 
 
@@ -243,6 +252,8 @@ ol {
     background:#f25c05 ;
     font-weight: bold;
     border-radius: 5px;
+    margin:auto;
+    
 
 }
 
@@ -259,7 +270,7 @@ ol {
 }
 
 .inicio_marzo {
-    grid-column-start: 0;
+    grid-column-start: 1;
 }
 
 .ultimo_dia_marzo{
