@@ -305,13 +305,29 @@ body {
 }
 
 /* Seleccionamos el enlace por su clase o etiqueta */
-a {
-    color: #964B00;          /* El color marrón del título derecho */
-    text-decoration: none;   /* Quita la línea azul de abajo */
-    font-weight: bold;       /* Lo hace negrita para que resalte igual */
-    display: block;          /* Permite que el centrado funcione mejor */
-    text-align: center;      /* Centra el texto */
-    font-size: 1.2em;        /* Ajusta el tamaño según necesites */
+h3{
+    text-align: center;
+}
+
+.boton-mas {
+    display: inline-block;    /* ¡ESTO ES LO MÁS IMPORTANTE! Permite que se centre y acepte padding */
+    background-color: #f25a05; /* El color naranja de tu imagen */
+    color: white;              /* Texto blanco */
+    padding: 8px 16px;        /* Tamaño del botón */
+    text-decoration: none;     /* Quita el subrayado azul típico de los enlaces */
+    border-radius: 35px;       /* Bordes muy redondeados como en tu foto */
+    font-weight: bold;         /* Texto en negrita */
+    margin-top: 19px;          /* Espacio respecto al texto de arriba */
+  
+    /* Para asegurar que se centre si el padre tiene text-align: center */
+    text-align: center;
+    display: block;
+  width: fit-content; /* El botón solo mide lo que mide su texto */
+  margin: 20px auto;  /* El 'auto' a los lados lo empuja al centro */
+}
+
+  .boton-mas:hover {
+    background-color: #f23005;
 }
 
 h3{
