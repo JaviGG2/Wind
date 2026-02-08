@@ -49,7 +49,7 @@
 .barra-titulo{
     font-weight: bold;
     font-size: 20px;
-    background: linear-gradient(rgb(255, 238, 199), #ffca8e);
+    
     border: 20px;
 
 
@@ -363,6 +363,7 @@ button {
     border-radius: 15px;
     margin: 15px;
     color: #e6e6e6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 
@@ -376,14 +377,22 @@ button {
 .lista{
     display: none;
     position: relative;
-    background: #ffc400;
-    border:  solid ;
+    background: #f28705;
+    box-shadow: #000000;
     padding: .1px;
     font-weight: bold;
-    
+    box-shadow: 0 10px 10px  #f25c0577;
     border-radius: 5px;
     margin: 0 0 5px;
+    box-shadow: 0 10px 10px  rgba(0, 0, 0, 0.336);
+    margin-top: 7px;
+    margin-bottom: 10px;
+}
+
+.lista:hover{
    
+    box-shadow: 0 10px 10px  #f25c0577;
+    
 }
 
 .menu:hover .lista{
