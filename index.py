@@ -12,6 +12,7 @@ def index(): #para los enlaces en html este es el nombre que reconoce
 def info():
     return render_template ('info.html')
 
+
 @app.route('/calendario')
 def calendario():
     return render_template('calendario.html')

@@ -241,7 +241,7 @@ ol {
 
 }
 
-li {
+ol li {
     margin: 0 0 18px 0;
     box-shadow: 0 .2px .2px ;
     
@@ -292,6 +292,10 @@ li {
 
 .inicio_mayo{
     grid-column-start: 6;
+    color: #000000;
+    background: #f28705;
+    border-radius: 20px;
+    font-weight: bold;
 }
 
 .ultimo_dia_mayo{
@@ -339,6 +343,10 @@ li {
 
 .inicio_noviembre{
     grid-column-start: 1;
+    color: #000000;
+    background: #f28705;
+    border-radius: 20px;
+    font-weight: bold;
 }
 
 .ultimo_dia_noviembre{
@@ -367,7 +375,7 @@ button {
 
 }
 
-.menu{
+.menu2{
     position: relative;
     display: inline-block;
     
@@ -395,7 +403,7 @@ button {
     
 }
 
-.menu:hover .lista{
+.menu2:hover .lista{
     display: block;
     
 
