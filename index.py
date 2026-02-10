@@ -183,51 +183,58 @@ from flask import render_template, request, redirect, url_for, Flask
 
 @app.route('/game')
 def juegos():
-    """Página principal del juego con preguntas aleatorias"""
-    #  Se Creo una copia para no alterar la lista original permanentemente
+    """Página principal del juego con solo 4 preguntas aleatorias"""
     preguntas_mezcladas = QUIZ_QUESTIONS.copy()
-    
-    # Aleatorizar el orden
     random.shuffle(preguntas_mezcladas)
     
-    # También podemos aleatorizar las opciones dentro de cada pregunta
-    for q in preguntas_mezcladas:
-        random.shuffle(q['options'])
+    # EL PUNTO ESPECÍFICO: Cortamos la lista para quedarnos solo con 4
+    selección_final = preguntas_mezcladas[:4]
+    
+    for q in selección_final:
+        # Copiamos las opciones para no mezclar las originales del JSON
+        opciones = q['options'].copy()
+        random.shuffle(opciones)
+        q['options_shuffled'] = opciones # Guardamos una versión mezclada
         
-    return render_template('juegos.html', questions=preguntas_mezcladas)
+    return render_template('juegos.html', questions=selección_final)
 
 @app.route('/submit', methods=['POST'])
 def submit_quiz():
-    """Procesa las respuestas buscando por ID (esto respeta la lógica)"""
     score = 0
-    total_questions = len(QUIZ_QUESTIONS)
     results = []
     
-    for question in QUIZ_QUESTIONS:
-        # Usamos el id original para encontrar la respuesta en el form
-        
-        question_id = str(question['id'])
-        user_answer = request.form.get(question_id, '')
-        correct_answer = question['correct_answer']
-        
-        is_correct = user_answer == correct_answer
-        if is_correct:
-            score += 1
-            
-        results.append({
-            'question': question['question'],
-            'user_answer': user_answer,
-            'correct_answer': correct_answer,
-            'is_correct': is_correct
-        })
+    # Obtenemos todos los IDs que el usuario respondió (que serán 4)
+    # request.form tiene los IDs como llaves
+    ids_respondidos = request.form.keys() 
     
-    percentage = (score / total_questions) * 100
+    for question in QUIZ_QUESTIONS:
+        question_id = str(question['id'])
+        
+        # Solo procesamos si el ID de esta pregunta está en las respuestas enviadas
+        if question_id in ids_respondidos:
+            user_answer = request.form.get(question_id, '')
+            correct_answer = question['correct_answer']
+            
+            is_correct = user_answer == correct_answer
+            if is_correct:
+                score += 1
+                
+            results.append({
+                'question': question['question'],
+                'user_answer': user_answer,
+                'correct_answer': correct_answer,
+                'is_correct': is_correct
+            })
+    
+    # EL PUNTO ESPECÍFICO PARA EL CÁLCULO:
+    total_respondidas = len(results) # Esto será 4
+    percentage = (score / total_respondidas) * 100 if total_respondidas > 0 else 0
+    
     return render_template('verificar_quiz.html', 
                          score=score, 
-                         total=total_questions, 
+                         total=total_respondidas, 
                          percentage=percentage,
                          results=results)
-
 #Segundo Quiz
 
 

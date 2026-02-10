@@ -57,7 +57,7 @@
             <div class="quiz-header">
                 <div class="stats">
                     <span><i class="fas fa-question-circle"></i> {{ questions|length }} preguntas</span>
-                    <span><i class="fas fa-clock"></i> Tiempo estimado: 5 min</span>
+                    <span><i class="fas fa-clock"></i> Tiempo estimado: 3 min</span>
                 </div>
                 <div class="instructions">
                     <p><i class="fas fa-info-circle"></i> Selecciona la respuesta correcta para cada pregunta.</p>
@@ -68,7 +68,7 @@
                 {% for question in questions %}
                 <div class="question-card">
                     <div class="question-header">
-                        <span class="question-number">Pregunta {{ question.id }}</span>
+                        <span class="question-number">Pregunta {{ loop.index }}</span>
                         <span class="points">1 punto</span>
                     </div>
                     
