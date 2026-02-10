@@ -82,6 +82,14 @@ QUIZ_QUESTIONS = [
         "options": ["Tallado de piedras volcánicas", "Uso de estructura de acero y hormigón", "Construcción en tierra (adobe y tapia)",
          "Arquitectura de vidrio y madera"],
         "correct_answer": "Construcción en tierra (adobe y tapia)"
+    },
+
+    {
+        "id": 6,
+        "question": "¿Que un sistema?",
+        "options": ["Un conjunto de partes", "Bloques", "Conexiones",
+         "Vidrio"],
+        "correct_answer": "Un conjunto de partes"
     }
 ]
 
