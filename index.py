@@ -37,6 +37,10 @@ def balcon_arcayas():
 def museo_guadalupano():
     return render_template('museo_guadalupano.html')
 
+@app.route('/restart')
+def restart():
+    return redirect(url_for('juegos'))  
+
 
 #Aqui esta la logica de los Quiz
 #Preguntas del quiz
