@@ -106,8 +106,8 @@ QUIZ_QUESTIONS = [
     {
         "id": 9,
         "question": "¿Cómo se llama la casa de dos plantas conocida por sus extensos balcones de madera que perteneció a una de las familias más influyentes?",
-        "options": ["Casa de los Arcaya", "Casa del Obispo", "Casa de la Poesía", "Casa de los Senior"],
-        "correct_answer": "Casa de los Arcaya"
+        "options": ["Balcón de los Arcaya", "Casa del Obispo", "Casa de la Poesía", "Casa de los Senior"],
+        "correct_answer": "Balcón de los Arcaya"
     },
     {
         "id": 10,
@@ -120,7 +120,7 @@ QUIZ_QUESTIONS = [
     {
         "id": 11,
         "question": "¿Cómo se conoce popularmente a Coro debido a su estrecha relación con la fe católica y sus múltiples templos?",
-        "options": ["La Ciudad de los Puertos", "La Ciudad Mariana", "La Ciudad de los Vientos", "La Atenas de Venezuela"],
+        "options": ["La Ciudad de los Puertos", "La Ciudad Mariana", "La Ciudad de los Soles", "La Atenas de Venezuela"],
         "correct_answer": "La Ciudad Mariana"
     },
     {
@@ -144,8 +144,8 @@ QUIZ_QUESTIONS = [
     {
         "id": 15,
         "question": "¿Cuál es el nombre de la familia de origen judío cuya casa es un hito arquitectónico y cultural en el casco histórico?",
-        "options": ["Familia Senior", "Familia Smith", "Familia Gumersindo", "Familia Pinto"],
-        "correct_answer": "Familia Senior"
+        "options": ["Familia Sénior", "Familia Smith", "Familia Gumersindo", "Familia Pinto"],
+        "correct_answer": "Familia Sénior"
     },
     {
         "id": 16,
