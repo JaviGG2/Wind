@@ -45,6 +45,9 @@ def museo_guadalupano():
 
 
 # Preguntas del quiz (puedes modificar estas)
+
+
+
 QUIZ_QUESTIONS = [
     {
         "id": 1,
@@ -83,20 +86,36 @@ QUIZ_QUESTIONS = [
 ]
 
 
+import random  # 
+from flask import render_template, request, redirect, url_for, Flask
+
+
+
 @app.route('/game')
 def juegos():
-    """Página principal del juego"""
-    return render_template('juegos.html', questions=QUIZ_QUESTIONS)
-
+    """Página principal del juego con preguntas aleatorias"""
+    #  Se Creo una copia para no alterar la lista original permanentemente
+    preguntas_mezcladas = QUIZ_QUESTIONS.copy()
+    
+    # Aleatorizar el orden
+    random.shuffle(preguntas_mezcladas)
+    
+    # También podemos aleatorizar las opciones dentro de cada pregunta
+    for q in preguntas_mezcladas:
+        random.shuffle(q['options'])
+        
+    return render_template('juegos.html', questions=preguntas_mezcladas)
 
 @app.route('/submit', methods=['POST'])
 def submit_quiz():
-    """Procesa las respuestas del quiz"""
+    """Procesa las respuestas buscando por ID (esto respeta la lógica)"""
     score = 0
     total_questions = len(QUIZ_QUESTIONS)
     results = []
     
     for question in QUIZ_QUESTIONS:
+        # Usamos el id original para encontrar la respuesta en el form
+        
         question_id = str(question['id'])
         user_answer = request.form.get(question_id, '')
         correct_answer = question['correct_answer']
@@ -113,21 +132,18 @@ def submit_quiz():
         })
     
     percentage = (score / total_questions) * 100
-    
     return render_template('verificar_quiz.html', 
                          score=score, 
                          total=total_questions, 
                          percentage=percentage,
                          results=results)
 
-
-@app.route('/restart')
-def restart():
-    """Reinicia el juego"""
-    return redirect(url_for('juegos'))
+#Segundo Quiz
 
 
-#segundo juegos
+
+
+#segundo juegos Sacrambble
 
 # index.py - Añadir después de las rutas existentes
 
