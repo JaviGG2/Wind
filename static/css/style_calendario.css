@@ -187,8 +187,10 @@
 
     
   }
-  
-  
+ 
+
+
+
   /* Ajuste opcional para pantallas muy pequeñas */
   @media (max-width: 480px) {
     .cuadro-adaptable {
@@ -209,13 +211,21 @@
     color: black;
 }
 
- 
+ @keyframes aparecer {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+ }
+  @keyframes aparecer {
+  from { opacity: 0; transform: rotate3d(0, 1, 0, 20deg); }
+  to { opacity: 1; transform: rotate3d(0, 1, 0, 0deg); }
+  }
 
 .dia_importante{
     color: #000000;
     background: #f28705;
     border-radius: 20px;
     font-weight: bold;
+     animation: aparecer 1s ease-out forwards;
 }
 
 
@@ -367,11 +377,18 @@ button {
     width: 200px;
     height: 50px;
     background: linear-gradient(to right,  #f25c05, #f29705);
-    border-radius: 15px;
+    border-radius: 25px;
     margin: 15px;
     color: #e6e6e6;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+    transition: all 0.3s ease;
+}
+button:hover {
+    background: linear-gradient(to right,  #f23005, #f28305);
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transform: rotate3d(0, 2, 0, 20deg);
+    
 }
 
 .menu2{
@@ -379,6 +396,11 @@ button {
     display: inline-block;
     
     
+}
+
+@keyframes desaparecer {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(20px); }
 }
 
 .lista{
@@ -394,12 +416,18 @@ button {
     box-shadow: 0 10px 10px  rgba(0, 0, 0, 0.336);
     margin-top: 7px;
     margin-bottom: 10px;
+    transition: all 0.3s ease;
+     animation: aparecer 1s ease-out forwards;
+    
+     
 }
 
+
 .lista:hover{
-   
     box-shadow: 0 10px 10px  #f25c0577;
+    transform: scale(1.1);
     
+
 }
 
 .menu2:hover .lista{
