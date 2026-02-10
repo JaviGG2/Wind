@@ -146,14 +146,24 @@
 }
 .content p{
     font-size: 15px;
+    animation: aparecer 1.1s ease-out forwards;
 }
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.content h1 {
+  animation: aparecer 1s ease-out forwards;
+
+}
+
 .content h1{
     background: linear-gradient(to right,  #f25c05, #f29705);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-
 }
+
 
 /* La Tarjeta Principal */
 .card {
@@ -167,6 +177,7 @@
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease;
+    animation: aparecer 1.2s ease-out forwards;
   }
   
   
@@ -242,6 +253,9 @@
   
   .card-button:hover {
     background-color: #f23005;
+    transform: scale(1.1);
+    transform: rotate3d(0, 2, 0 20deg);
+    box-shadow: #f2830571 0px 5px 15px;
     
 }
 
@@ -258,6 +272,8 @@
 
 
 }
+
+
 
 .contenedor-flexible {
     display: flex;
@@ -288,6 +304,8 @@
     font-family: sans-serif;
     line-height: 1.6;
     transition: 0.3s;
+    cursor: default;
+    animation: aparecer 1.5s ease-out forwards;
     
   }
   .cuadro-adaptable:hover  {
@@ -304,7 +322,7 @@
   .cuadro-adaptable h3:hover {
     transition: all 0.3s ease;
     color: #f23005;
-    cursor: pointer;
+    cursor: default;
     font-size: 35px;
   }
   .card-button-2{
@@ -332,7 +350,7 @@
         }
     .cuadro-adaptable p:hover {
         color: #f23005;
-        cursor: pointer;
+        cursor: default;
         font-size: 18px;
         transform: scale(1.1);
         transition: all 0.3s ease;
@@ -360,7 +378,9 @@
     text-underline-offset: 4px;
     font-weight: bold;
     color: black;
+    cursor: default;
 }
+
 
 .game-brain{
     width: 100%;
