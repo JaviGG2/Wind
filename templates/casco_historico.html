@@ -14,7 +14,9 @@
             <img src="{{ url_for('static', filename='img/icons8_left.ico')}}" alt="Logo">
         </a>
             
-            <span class="barra-titulo" >Casco Histórico</span>
+            <span class="barra-titulo" >Casco Histórico</span> 
+            <span><audio src="{{ url_for('static', filename='audio/casco.wav') }}" controls></audio>
+</span>
         </div>
 
         
@@ -27,6 +29,7 @@
         <label for="btn-menu" class="menu-open-btn">
             <img src="{{url_for('static', filename='img/icons8_menu.ico')}}" alt="Abrir Menú">
         </label>
+        
 
 
         <div class="menu-overlay">
@@ -179,6 +182,8 @@
         Ver zona en Google Maps
     </a>
 </div>
+
+    <audio src="{{ url_for('static', filename='audio/casco.wav') }}" controls></audio>
 
 
         <footer class="footer">

@@ -236,12 +236,13 @@
     border-radius: 35px;
     font-weight: bold;
     align-self: center;   /* Centra solo el botón */
-    transition: background 0.3s;
+    transition:  0.3s;
+
   }
-  
   
   .card-button:hover {
     background-color: #f23005;
+    
 }
 
 .calen h1{
@@ -286,10 +287,61 @@
     /* Tipografía fluida */
     font-family: sans-serif;
     line-height: 1.6;
+    transition: 0.3s;
     
   }
-  
-  
+  .cuadro-adaptable:hover  {
+    
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(242, 48, 5, 0.3);
+    transform:  translateY(-5px) rotateY(5deg);
+  }
+
+  .cuadro-adaptable h3 {
+   
+    transition: all 0.3s ease;
+  }
+  .cuadro-adaptable h3:hover {
+    transition: all 0.3s ease;
+    color: #f23005;
+    cursor: pointer;
+    font-size: 35px;
+  }
+  .card-button-2{
+    margin-top:19px;
+    margin-bottom:15px;
+    box-shadow: 6px 5px 15px ;
+    font-size: 16px;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #f25c05; /* El naranja de tu logo */
+    color: white;
+    text-decoration: none;
+    border-radius: 35px;
+    font-weight: bold;
+    align-self: center;   /* Centra solo el botón */
+    transition:  0.3s;
+  }
+    .card-button-2:hover {
+        background-color: #f23005;
+        box-shadow: #f2830571 0px 5px 15px;
+        transform: rotate3d(0, 1, 0, 20deg) scale(1.1);
+    }  
+    .cuadro-adaptable p {
+            transition: 0.3s;
+        }
+    .cuadro-adaptable p:hover {
+        color: #f23005;
+        cursor: pointer;
+        font-size: 18px;
+        transform: scale(1.1);
+        transition: all 0.3s ease;
+
+        
+    }
+
+
+
   /* Ajuste opcional para pantallas muy pequeñas */
   @media (max-width: 480px) {
     .cuadro-adaptable {
