@@ -153,9 +153,19 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+
+@keyframes latido {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+
+
 .content h1 {
   animation: aparecer 1s ease-out forwards;
-
+  display: inline-block; /* Importante para que scale funcione */
+  animation: latido 1.5s 6;
 }
 
 .content h1{

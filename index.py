@@ -84,14 +84,96 @@ QUIZ_QUESTIONS = [
         "correct_answer": "Construcción en tierra (adobe y tapia)"
     },
 
+    
     {
         "id": 6,
-        "question": "¿Que un sistema?",
-        "options": ["Un conjunto de partes", "Bloques", "Conexiones",
-         "Vidrio"],
-        "correct_answer": "Un conjunto de partes"
-    }
+        "question": "¿En qué año fue declarado el Casco Histórico de Coro y su Puerto de La Vela como Patrimonio de la Humanidad por la UNESCO?",
+        "options": ["1990", "1993", "1999", "2005"],
+        "correct_answer": "1993"
+    },
+    {
+        "id": 7,
+        "question": "¿Cuál es el nombre de la casa famosa por tener un portal tallado con la figura del 'Astro Rey'?",
+        "options": ["Casa de los Arcaya", "Casa del Sol", "Casa del Tesoro", "Casa de las Ventanas de Hierro"],
+        "correct_answer": "Casa del Sol"
+    },
+    {
+        "id": 8,
+        "question": "¿Qué influencia arquitectónica europea se mezcló con la española en Coro debido al comercio con las islas vecinas como Curazao?",
+        "options": ["Francesa", "Inglesa", "Holandesa", "Italiana"],
+        "correct_answer": "Holandesa"
+    },
+    {
+        "id": 9,
+        "question": "¿Cómo se llama la casa de dos plantas conocida por sus extensos balcones de madera que perteneció a una de las familias más influyentes?",
+        "options": ["Casa de los Arcaya", "Casa del Obispo", "Casa de la Poesía", "Casa de los Senior"],
+        "correct_answer": "Casa de los Arcaya"
+    },
+    {
+        "id": 10,
+        "question": "¿Qué madera local, conocida por su dureza, se utiliza tradicionalmente para las vigas de las casas coloniales corianas?",
+        "options": ["Pino", "Cují", "Cedro", "Caobo"],
+        "correct_answer": "Cují"
+    },
+
+    
+    {
+        "id": 11,
+        "question": "¿Cómo se conoce popularmente a Coro debido a su estrecha relación con la fe católica y sus múltiples templos?",
+        "options": ["La Ciudad de los Puertos", "La Ciudad Mariana", "La Ciudad de los Vientos", "La Atenas de Venezuela"],
+        "correct_answer": "La Ciudad Mariana"
+    },
+    {
+        "id": 12,
+        "question": "¿Qué héroe de la independencia y expresidente de Venezuela nació en el estado Falcón y tiene una plaza importante en el casco histórico?",
+        "options": ["Simón Bolívar", "José Antonio Páez", "Juan Crisóstomo Falcón", "Antonio José de Sucre"],
+        "correct_answer": "Juan Crisóstomo Falcón"
+    },
+    {
+        "id": 13,
+        "question": "¿Qué nombre recibe el desierto de dunas que rodea la entrada a la ciudad de Coro?",
+        "options": ["Médanos de Coro", "Dunas de Falcón", "Desierto de Ampíes", "Arenales de la Vela"],
+        "correct_answer": "Médanos de Coro"
+    },
+    {
+        "id": 14,
+        "question": "¿En qué lugar de la ciudad se cree que se encuentra enterrado un tesoro real, dando pie a numerosas leyendas locales?",
+        "options": ["En la Catedral", "En la Casa del Tesoro", "Bajo la Cruz de San Clemente", "En el Puerto de La Vela"],
+        "correct_answer": "En la Casa del Tesoro"
+    },
+    {
+        "id": 15,
+        "question": "¿Cuál es el nombre de la familia de origen judío cuya casa es un hito arquitectónico y cultural en el casco histórico?",
+        "options": ["Familia Senior", "Familia Smith", "Familia Gumersindo", "Familia Pinto"],
+        "correct_answer": "Familia Senior"
+    },
+    {
+        "id": 16,
+        "question": "¿Qué elemento decorativo exterior, ubicado sobre las puertas, es típico para identificar las casas coloniales de Coro?",
+        "options": ["Gárgolas de piedra", "Mosaicos romanos", "Tejaroces y portales tallados", "Estatua de bronce"],
+        "correct_answer": "Tejaroces y portales tallados"
+    },
+    {
+        "id": 17,
+        "question": "¿Qué puerto, ubicado a pocos minutos de Coro, es parte integral de la zona declarada Patrimonio de la Humanidad?",
+        "options": ["Puerto Cabello", "Puerto de La Vela", "Puerto de Adícora", "Puerto de Cumarebo"],
+        "correct_answer": "Puerto de La Vela"
+    },
+    {
+        "id": 18,
+        "question": "¿Cómo se llama el cementerio judío de Coro, considerado el más antiguo de su tipo en uso continuo en América?",
+        "options": ["Cementerio de los Mártires", "Cementerio Judío de Coro", "Panteón de Falcón", "Jardín de la Memoria"],
+        "correct_answer": "Cementerio Judío de Coro"
+    },
+    {
+        "id": 19,
+        "question": "¿Qué material se mezcla con la tierra y la paja para dar el acabado liso y blanco a las paredes de las casas coloniales?",
+        "options": ["Yeso", "Cal", "Cemento blanco", "Mármol pulverizado"],
+        "correct_answer": "Cal"
+        },
+
 ]
+
 
 
 import random  # 
