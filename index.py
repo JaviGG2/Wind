@@ -249,31 +249,59 @@ def submit_quiz():
 # index.py - Añadir después de las rutas existentes
 
 
+import random
+from flask import Flask, render_template, request
+
+# ... (tu configuración de app)
+
 PALABRAS_SCRAMBLE = [
+    
     {"palabra": "HIERRO", "mezclada": "IRHREO"},
     {"palabra": "ADOBE", "mezclada": "BADEO"},
     {"palabra": "BALCÓN", "mezclada": "ÓBLCNA"},
     {"palabra": "BARRO", "mezclada": "RBROA"},
     {"palabra": "ARTE", "mezclada": "ETAR"},
-]
+    {"palabra": "LADRILLO", "mezclada": "LLRIDALO"},
+    {"palabra": "CEMENTO", "mezclada": "TENEMCO"},
+    {"palabra": "MADERA", "mezclada": "REDAAM"},
+    {"palabra": "PIEDRA", "mezclada": "RIDAPE"},
+    {"palabra": "VENTANA", "mezclada": "NANATVE"},
+    {"palabra": "PASILLO", "mezclada": "LLIPASO"},
+    {"palabra": "CIMIENTO", "mezclada": "TIMIECNO"},
+    {"palabra": "AZULEJO", "mezclada": "LUZAJEO"},
+    {"palabra": "TEJADO", "mezclada": "DOTAEJ"},
+    {"palabra": "PINTURA", "mezclada": "TURAPIN"},
+    {"palabra": "COLUMNA", "mezclada": "LUMCOAN"},
+    {"palabra": "MARMOL", "mezclada": "MOLMAR"},
+    {"palabra": "FACHADA", "mezclada": "HADAFACO"},
+    {"palabra": "ESTRUCTURA", "mezclada": "TURUCTESRA"},
+    {"palabra": "ESCALERA", "mezclada": "RECALESA"}
 
+]
 
 @app.route('/scramble')
 def scramble():
-    """Juego de palabras mezcladas"""
-    return render_template('scramble.html', palabras=PALABRAS_SCRAMBLE)
-
+    """Juego de palabras mezcladas con orden aleatorio"""
+    # Creamos una copia mezclada de la lista original
+    palabras_aleatorias = random.sample(PALABRAS_SCRAMBLE, k=len(PALABRAS_SCRAMBLE))
+    
+    return render_template('scramble.html', palabras=palabras_aleatorias)
 
 @app.route('/verificar_scramble', methods=['POST'])
 def verificar_scramble():
-    """Verifica las respuestas del scramble"""
+    """Verifica las respuestas basándose en la palabra original enviada oculta"""
     correctas = 0
     resultados = []
     
-    for i in range(len(PALABRAS_SCRAMBLE)):
+    # Obtenemos todas las palabras originales que enviamos al formulario
+    # para comparar correctamente sin importar el orden
+    palabras_originales = request.form.getlist('palabra_real')
+    palabras_mezcladas = request.form.getlist('palabra_mezclada')
+    
+    for i in range(len(palabras_originales)):
         respuesta = request.form.get(f'respuesta_{i}', '').upper().strip()
-        palabra_real = PALABRAS_SCRAMBLE[i]['palabra']
-        mezclada = PALABRAS_SCRAMBLE[i]['mezclada']
+        palabra_real = palabras_originales[i]
+        mezclada = palabras_mezcladas[i]
         
         es_correcta = respuesta == palabra_real
         if es_correcta:
@@ -286,11 +314,10 @@ def verificar_scramble():
             'es_correcta': es_correcta
         })
     
-    return render_template('resultado_scramble.html',
-                         correctas=correctas,
-                         total=len(PALABRAS_SCRAMBLE),
-                         resultados=resultados)
-
+    return render_template('resultado_scramble.html', 
+                           correctas=correctas, 
+                           total=len(resultados), 
+                           resultados=resultados)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)

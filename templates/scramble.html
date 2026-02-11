@@ -49,49 +49,35 @@
     
     
         <div class="container">
-            <h1>Wind Scramble</h1>
-            <p>Ordena las letras para formar palabras</p>
+    <h1>Wind Scramble</h1>
+    <p>Ordena las letras para formar palabras</p>
+    
+    <div class="instrucciones">
+        <p><strong>Instrucciones:</strong> Las letras están mezcladas. Escribe la palabra correcta en cada casilla.</p>
+    </div>
+    
+    <form action="/verificar_scramble" method="POST">
+        {% for palabra in palabras %}
+        <div class="palabra-card">
+            <h3>Palabra {{ loop.index }}:</h3>
+            <div class="letras-mezcladas">{{ palabra.mezclada }}</div>
             
-            <div class="instrucciones">
-                <p><strong>Instrucciones:</strong> Las letras están mezcladas. Escribe la palabra correcta en cada casilla.</p>
-            </div>
+            <input type="hidden" name="palabra_real" value="{{ palabra.palabra }}">
+            <input type="hidden" name="palabra_mezclada" value="{{ palabra.mezclada }}">
             
-            <form action="/verificar_scramble" method="POST">
-                <div class="palabra-card">
-                    <h3>Palabra 1:</h3>
-                    <div class="letras-mezcladas">IRHREO</div>
-                    <input type="text" name="respuesta_0" placeholder="Escribe la palabra aquí..." required>
-                </div>
-                
-                <div class="palabra-card">
-                    <h3>Palabra 2:</h3>
-                    <div class="letras-mezcladas">BADEO</div>
-                    <input type="text" name="respuesta_1" placeholder="Escribe la palabra aquí..." required>
-                </div>
-                
-                <div class="palabra-card">
-                    <h3>Palabra 3:</h3>
-                    <div class="letras-mezcladas">ÓBLCNA</div>
-                    <input type="text" name="respuesta_2" placeholder="Escribe la palabra aquí..." required>
-                </div>
-                
-                <div class="palabra-card">
-                    <h3>Palabra 4:</h3>
-                    <div class="letras-mezcladas">RBROA</div>
-                    <input type="text" name="respuesta_3" placeholder="Escribe la palabra aquí..." required>
-                </div>
-                
-                <div class="palabra-card">
-                    <h3>Palabra 5:</h3>
-                    <div class="letras-mezcladas">ETAR</div>
-                    <input type="text" name="respuesta_4" placeholder="Escribe la palabra aquí..." required>
-                </div>
-                
-                <button type="submit" class="btn-verificar">Verificar Respuestas</button>
-            </form>
-            
-            <a href="/juegos" class="volver">Volver a Juegos</a>
+            <input type="text" 
+                   name="respuesta_{{ loop.index0 }}" 
+                   placeholder="Escribe la palabra aquí..." 
+                   required 
+                   autocomplete="off">
         </div>
+        {% endfor %}
+        
+        <button type="submit" class="btn-verificar">Verificar Respuestas</button>
+    </form>
+    
+    <a href="/juegos" class="volver">Volver a Juegos</a>
+</div>
     
 
 </body>
